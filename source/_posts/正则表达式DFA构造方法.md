@@ -1,6 +1,6 @@
 title: 正则表达式DFA构造方法
 date: 2015-01-01 13:09:04
-tags: [以前]
+categories: [以前]
 ------------------
 
 陈梓瀚 [ vczh@163.com ](mailto:vczh@163.com) [ http://www.cppblog.com/vczh/

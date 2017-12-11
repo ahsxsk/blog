@@ -1,6 +1,6 @@
 title: Java集合：集合框架
 date: 2017-11-11 13:09:04
-tags: [Java集合]
+categories: [Java集合]
 ------------------
 
 Java集合源码位于Java.util包下，主要包括List、Set、Map、Iterator以及工具类Arrays和Collections。Java集合框
@@ -14,7 +14,7 @@ o)等方法。Java SDK提供了继承与Collection的子接口List、Set或者Qu
 ion接口的类都必须提供两个标准的构造函数：无参数的构造函数用于创建一个空的Collection，有一个
 Collection参数的构造函数用于创建一个新的Collection，这个新的Collection与传入的Collection有相同的元素。后
 一个构造函数允许用户复制一个Collection。
-
+<!--阅读全文-->
 ###  1.1 List接口
 
 List接口继承与Collection接口，它是一个允许有重复元素的的列表，能够控制元素的插入位置，通过索引来访问List中的元素。常见的List的实现有L

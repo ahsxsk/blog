@@ -1,6 +1,6 @@
 title: Redis主从同步原理-PSYNC
 date: 2017-11-11 13:09:04
-tags: [Redis]
+categories: [Redis]
 ------------------
 
 之前写过一篇博客（ [ http://blog.csdn.net/sk199048/article/details/50725369

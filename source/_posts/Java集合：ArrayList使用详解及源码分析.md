@@ -1,6 +1,6 @@
 title: Java集合：ArrayList使用详解及源码分析
 date: 2017-11-11 13:09:04
-tags: [Java集合]
+categories: [Java集合]
 ------------------
 
 ##  1 使用方法

@@ -1,6 +1,6 @@
 title: Java字符串：StringBuffer使用详解及源码分析
 date: 2017-11-11 13:09:04
-tags: [Java字符串]
+categories: [Java字符串]
 ------------------
 
 ##  1 使用方法

@@ -1,6 +1,6 @@
 title: MySQL主从复制原理
 date: 2017-11-11 13:09:04
-tags: [MySQL]
+categories: [MySQL]
 ------------------
 MySQL主从复制原理
 

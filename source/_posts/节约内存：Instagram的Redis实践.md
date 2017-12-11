@@ -1,6 +1,6 @@
 title: 节约内存：Instagram的Redis实践
 date: 2015-01-01 13:09:04
-tags: [Redis]
+categories: [Redis]
 ------------------
 
 Instagram  可以说是网拍App的始祖级应用，也是当前最火热的拍照App之一，Instagram的照片数量已经达到3亿，而在Instagram里，我们需要知道每一张照片的作者是谁，下面就是Instagram团队如何使用Redis来解决这个问题并进行内存优化的。
@@ -9,7 +9,7 @@ Instagram  可以说是网拍App的始祖级应用，也是当前最火热的拍
 
   * 查询速度要足够快 
   * 数据要能全部放到内存里，最好是一台EC2的 high-memory 机型就能存储（17GB或者34GB的，68GB的太浪费了） 
-  * 要合适Instagram现有的架构（Instagram对  [ Redis ](http://blog.nosqlfan.com/tags/redis) 有一定的使用经验，比如 [ 这个应用 ](http://blog.nosqlfan.com/html/2007.html) ） 
+  * 要合适Instagram现有的架构（Instagram对  [ Redis ](http://blog.nosqlfan.com/categories/redis) 有一定的使用经验，比如 [ 这个应用 ](http://blog.nosqlfan.com/html/2007.html) ） 
   * 支持持久化，这样在服务器重启后不需要再预热 
 
 Instagram的开发者首先否定了数据库存储的方案，他们保持了KISS原则（Keep It Simple and
@@ -29,15 +29,15 @@ Stupid），因为这个应用根本用不到数据库的update功能，事务�
 
 （  NoSQLFan：  其实这里我们可以看到一个优化点，我们可以将key值前面相同的media去掉，只存数字，这样key的长度就减少了，减少key值对内
 存的开销【注：Redis的key值不会做字符串到数字的转换，所以这里节省的，仅仅是media:这6个字节的开销】。经过实验，  [ 内存占用
-](http://blog.nosqlfan.com/tags/%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8)
+](http://blog.nosqlfan.com/categories/%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8)
 会降到50MB，总的内存占用是15GB，是满足需求的，但是Instagram后面的改进任然有必要  ）
 
 于是Instagram的开发者向Redis的开发者之一 [ Pieter Noordhuis
 ](https://twitter.com/#!/pnoordhuis) 询问优化方案，得到的回复是使用Hash结构。具体的做法就是将数据分段，每一段使用一
 个Hash结构存储，由于Hash结构会在单个Hash元素在不足一定数量时进行压缩存储，所以可以大量  [ 节约内存
-](http://blog.nosqlfan.com/tags/%E8%8A%82%E7%BA%A6%E5%86%85%E5%AD%98)
+](http://blog.nosqlfan.com/categories/%E8%8A%82%E7%BA%A6%E5%86%85%E5%AD%98)
 。这一点在上面的String结构里是不存在的。而这个一定数量是由配置文件中的  [ hash
-](http://blog.nosqlfan.com/tags/hash) -zipmap-max-entries参数来控制的。经过开发者们的实验
+](http://blog.nosqlfan.com/categories/hash) -zipmap-max-entries参数来控制的。经过开发者们的实验
 ，将hash-zipmap-max-entries设置为1000时，性能比较好，超过1000后HSET命令就会导致CPU消耗变得非常大。
 
 于是他们改变了方案，将数据存成如下结构：

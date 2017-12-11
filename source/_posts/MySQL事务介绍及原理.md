@@ -1,6 +1,6 @@
 title: MySQL事务介绍及原理
 date: 2017-11-11 13:09:04
-tags: [MySQL]
+categories: [MySQL]
 ------------------
 
 ##  1 为什么要事务

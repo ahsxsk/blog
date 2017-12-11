@@ -1,6 +1,6 @@
 title: Java字符串：String、StringBuilder、StringBuffer区别
 date: 2017-11-11 13:09:04
-tags: [Java字符串]
+categories: [Java字符串]
 ------------------
 
 在学习String、StringBuilder、StringBuffer这三个类的时候在github上看到如下几个问题：
