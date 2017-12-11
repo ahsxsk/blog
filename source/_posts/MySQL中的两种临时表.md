@@ -1,4 +1,7 @@
-MySQL中的两种临时表
+title: MySQL中的两种临时表
+date: 2017-11-11 13:09:04
+tags: [MySQL]
+------------------
 
 转自： [ http://mysql.taobao.org/monthly/2016/06/07/
 ](http://mysql.taobao.org/monthly/2016/06/07/)

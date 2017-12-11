@@ -1,4 +1,7 @@
-Java并发编程：ThreadPoolExecutor类及方法源码分析
+title: Java并发编程：ThreadPoolExecutor类及方法源码分析
+date: 2017-11-11 13:09:04
+tags: [Java并发编程]
+------------------
 
 ThreadPoolExecutor是jdk自带线程池实现类，现有的Executors工具类实现的几种线程池核心都是调用ThreadPoolExecutor
 类。ThreadPoolExecutor在jdk1.7及以后做了部分修改， ** 本文以JDK1.8为准 ** 。

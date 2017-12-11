@@ -1,4 +1,7 @@
-Java集合：集合框架
+title: Java集合：集合框架
+date: 2017-11-11 13:09:04
+tags: [Java集合]
+------------------
 
 Java集合源码位于Java.util包下，主要包括List、Set、Map、Iterator以及工具类Arrays和Collections。Java集合框
 架的顶级接口包括Collection和Map两个，其中Collection的子接口包括List、Set和Queue。具体结构如下：  

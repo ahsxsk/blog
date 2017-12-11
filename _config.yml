@@ -4,7 +4,7 @@
 
 # Site
 title: 史可的博客 
-subtitle: 学习、分享
+subtitle: 
 description:
 author: shike
 language:
@@ -53,7 +53,7 @@ index_generator:
   order_by: -date
   
 # Category & Tag
-default_category: uncategorized
+default_category: 
 category_map:
 tag_map:
 

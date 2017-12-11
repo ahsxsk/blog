@@ -1,4 +1,7 @@
-Java并发编程：线程池创建及源码分析
+title: Java并发编程：线程池创建及源码分析
+date: 2017-11-11 13:09:04
+tags: [Java并发编程]
+------------------
 
 Java5引入了线程池的顶级接口Executor，ExecutorService继承了Executor接口并增加了自己的方法。Executors工具类为Ex
 ecutor，ExecutorService，ScheduledExecutorService，ThreadFactory和Callable类提供了一些工具

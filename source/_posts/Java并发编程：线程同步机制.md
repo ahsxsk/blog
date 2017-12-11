@@ -1,4 +1,7 @@
-Java并发编程：线程同步机制
+title: Java并发编程：线程同步机制
+date: 2017-11-11 13:09:04
+tags: [Java并发编程]
+------------------
 
 ** Java中线程同步可以通过wait、notify、notifyAll等方法实现。这几个方法在最顶级的父类Object中实现，并且被声明为final，所以子类无法重写这几个方法。在实现线程同步时，一般需要配合synchronized关键字使用，定义同步代码块或者方法。JDK 1.5以后提供了Condition来实现线程间的协作，Condition提供的await、signal、signalAll方法相对于wait、notify、notifyAll的方法更加安全高效，Condition所使用的是ReentrantLock锁。 **
 

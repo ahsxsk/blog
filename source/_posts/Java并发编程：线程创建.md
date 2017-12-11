@@ -1,4 +1,7 @@
-Java并发编程：线程创建
+title: Java并发编程：线程创建
+date: 2017-11-11 13:09:04
+tags: [Java并发编程]
+------------------
 
 Java中创建线程最常用的方法有继承Thread类和实现Runnable两种。Thread类实际也是实现了Runnable方法，由于无法继承多个父类但是可以
 继承多个接口，所有创建进程大多是实现Runnable接口
