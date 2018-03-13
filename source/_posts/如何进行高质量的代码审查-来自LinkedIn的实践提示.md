@@ -7,7 +7,7 @@ categories: [技术文摘]
 
 [LinkedIn 代码审查实践原文 LinkedIn’s Tips for Highly Effective Code Review
 ](https://thenewstack.io/linkedin-code-review/)
-**摘要**
+### 摘要
 - LinkedIn将Code Review作为员工日常工作之一，并且是员工晋升的重要考核因素。借此，LinkedIn建立了健康的反馈文化：工程师在各个领域都对提出和接受反馈持开放态度。
 - Do I Understand the “Why”?     
 负责审查的同学必须提前了解到代码改动的原因，而不是从代码改动中推测原因。
