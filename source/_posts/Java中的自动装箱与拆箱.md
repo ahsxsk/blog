@@ -4,7 +4,6 @@ date: 2018-03-13 22:14:40
 tags: [Java, 自动装箱, Integer 缓存]
 categories: [技术文摘]
 ---
-
 [Java 中的自动装箱与拆箱原文](https://droidyue.com/blog/2015/04/07/autoboxing-and-autounboxing-in-java/)
 ### 摘要
 - JDK 1.5以后提供了自动装箱、拆箱功能，也就是我们在基本类型和包装类型转换的时候不再需要显示调用Integer.valueOf()、Integer.intValue()等方法。
